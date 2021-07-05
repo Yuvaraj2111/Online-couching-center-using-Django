@@ -3,7 +3,7 @@ Django Online couching center.
 
 ### Front end 
         HTML,CSS,JS
-  FRAME WORK 
+### FRAME WORK 
         PYTHON DJANGO
-  DATABASE
+### DATABASE
         CASSENDRA
