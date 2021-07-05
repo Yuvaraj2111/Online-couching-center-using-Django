@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="{% static 'css/style.css' %}" type="text/css">
+    <title>Certificate</title>
+    <style>
+       body{
+        border-style: solid;
+        border-color: navy;
+        border-width: 10px;
+       
+        }
+    </style>
+    
+</head>
+<body>
+    <p><center>
+
+         <ul class="nav">
+        <div class="logo">
+            <img src ="{% static 'images/logo.jpg' %}"></div>       
+            <h2 style="color: #191970;"><center>Certificate of Completion</center></h2>
+        <br><br>
+        This is to certify that <strong>{{name}}</strong>
+ studying / studied in <strong>{{enrolled_course}}</strong> Discipline / specialization has
+completed  online course in <i>Academics</i> with <strong> fair </strong> academics credits.
+
+    </p><br>  <br><br>Signature:<br>{{sign}}
+</center>
+<br><br>  <br><br>  <br><br>  <br><br>  <br><br>
+ 
+    
+</body>
+</html>

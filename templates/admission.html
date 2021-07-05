@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- css link -->
+    {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/admissionstyle.css' %}">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <!-- Javascript link -->
+  <script type="text/javascript" src=""></script> 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Academics&mdash;Admission</title>
+  </head>
+  <body>
+    <div class="top py-2 bg-light" >
+      <div class="container" >
+        <div class="row align-items-center" >
+          <div class="col-lg-9 d-none d-lg-block">
+            <a href="#" class="small text-success mr-3"><span><i class="fas fa-question-circle text-success"></i></span> Have a questions?</a> 
+            <a href="#" class="small text-success mr-3"><span><i class="fas fa-phone-square text-success"></i></span> 10 20 123 456</a> 
+            <a href="#" class="small text-success mr-3"><span><i class="fas fa-envelope text-success"></i></span> info@mydomain.com</a> 
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+  
+  <nav id="mainnavbar" class="mt-2 sticky-top navbar navbar-expand-lg navbar-light bg-light" style="font-size: 18px;font-weight: 50px;">
+
+  <a class="navbar-brand " href="#"><img src ="{% static 'images/logo.jpg' %}"></a>
+  <button class="navbar-toggler  mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav nav-fill w-100 mt-2">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' u.user %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About Us
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'about' u.user %}">Our Teachers</a>
+          
+        </div>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link font-weight-bolder text-success" href="{% url 'admission' u.user %}">Admissions</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'course' u.user %}">Courses</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="{% url 'contact' u.user %}">Contact</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="{% url 'show' u.user %}">Learning-Page</a>
+      </li>
+      <li class="nav-item ">
+        <button class="btn dropdown " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="h2 text-success fa fa-user-circle font-weight-bolder" style=""></i>
+        </button>
+        <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton" style="width: 260px;margin-left: 1050px;">
+          <p class="dropdown-item ml-5 pl-5"><i class="fa fa-user-circle text-dark display-4"></i></p>
+          <p class="dropdown-item border-bottom text-center text-dark"><strong>{{u.name}}</strong></p>
+          <p class="dropdown-item text-center border-bottom mt-2 text-dark"><strong>{{u.email}}</strong></p>
+          <a class="dropdown-item text-center text-dark" href="{% url 'logout' %}"><button class="btn btn-secondary">Log-out <i class="fas fa-door"></i></button></a>
+        </div>
+      </li>
+
+
+
+    </ul>
+
+      </div>
+
+  </nav>
+   <div class="back">
+                 <div class="card text-light " >
+                    <img style="width: 100%;filter: blur(2px) grayscale(40%);opacity: 90%;" src="{% static 'images/bg_1.png' %}" alt="Snow"> 
+                    <div class="card-img-overlay">
+                    <h4 class="card-title">Admission</h4>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>    
+                  </div>
+
+    
+      
+          </div>
+        </div>
+    </div> 
+
+
+
+<div class="mt-5 pt-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-lg-0 mb-4">
+                    <img src="{% static 'images/course_6.jpg' %}" alt="Image" class="img-fluid"> 
+                </div>
+                <div class="col-lg-5 ml-auto align-self-center">
+                    <h2 class=" mb-5">
+                        <span class="border-bottom border-success">Student Requirements</span>
+                    </h2>
+                    <div class="lines"style="color: gray">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque dolore libero corrupti! Itaque, delectus?</p>
+                    <p>Modi sit dolor repellat esse! Sed necessitatibus itaque libero odit placeat nesciunt, voluptatum totam facere.</p>
+
+                    <ul class="lines">
+                        <li>Accomplished Application Form</li>
+                        <li>High School Report Card </li>
+                        <li>High School Transcript</li>
+                        <li>Certificate of Good Moral Characte</li>
+                        <li>2×2 picture</li>
+                        <li>1×1 picture</li>
+                    </ul>
+
+                </div>
+            </div>
+                    </div>
+                    
+
+            <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
+                        <img src="{% static 'images/course_3.jpg' %}" alt="Image" class="img-fluid"> 
+                    </div>
+                    <div class="col-lg-5 order-2 order-lg-1 mr-auto align-self-center">
+                        <h2 class="mb-5">
+                            <span class="border-bottom border-success">Transferees</span>
+                        </h2>
+                        <div class="lines" style="color: gray">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque dolore libero corrupti! Itaque, delectus?</p>
+                        <p>Modi sit dolor repellat esse! Sed necessitatibus itaque libero odit placeat nesciunt, voluptatum totam facere.</p>
+                        <ul class="lines">
+                                <li>Accomplished Application Form</li>
+                                <li>High School Report Card </li>
+                                <li>High School Transcript</li>
+                                <li>Certificate of Good Moral Characte</li>
+                                <li>2×2 picture</li>
+                                <li class="mb-5">1×1 picture</li>
+                            </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+                        
+
+    <div class="s">
+      <div class="bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span><img src="{% static 'images/graduation-cap.png' %}"></span>
+              <h3>Our Philosphy</h3>
+              <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea? Dolore, amet reprehenderit.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span><img src="{% static 'images/tools.png'%}"></span>
+              <h3>Academics Principle</h3>
+              <p class="mb-5" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+                Dolore, amet reprehenderit.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span><img src="{% static 'images/library.png' %}"></span>
+              <h3>Key of Success</h3>
+              <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
+                Dolore, amet reprehenderit.</p>
+            </div>
+        </div>
+</div>
+      </div>
+        
+      </div>
+
+
+
+<div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <p class="my-5"><img src="{% static 'images/logo.png' %}" alt="Image" class="img-fluid"></p>
+            <p style="color: white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>  
+            <p><a href="#">Learn More</a></p>
+          </div>
+          <div class="col-lg-3">
+            
+          </div>
+          <div class="col-lg-3">
+              <h4 class="footer-heading my-5"><span><u>Our Courses</u></span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="{% url 'course_single' u.user 'App development' %}">App development</a></li>
+                  <li><a href="{% url 'course_single' u.user 'python' %}">Python</a></li>
+                  <li><a href="{% url 'course_single' u.user 'software engineering' %}">S/W engineering</a></li>
+                  <li><a href="{% url 'course_single' u.user 'c' %}">C programming</a></li>
+                  <li><a href="{% url 'course_single' u.user 'database management system' %}">DBMS</a></li>
+                  <li><a href="{% url 'course_single' u.user 'web designing' %}">Web Designing</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3">
+              <h4 class="footer-heading my-5"><span><u>Contact</u></span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Support Community</a></li>
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">Share Your Story</a></li>
+                  <li><a href="#">Our Supporters</a></li>
+              </ul>
+          </div>
+        </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Javascript link -->
+
+  </body>
+</html>

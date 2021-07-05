@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>display page</title>
+</head>
+<body>
+	<div style="justify-content: center;">
+	<h1>{{sub}}</h1>
+	{% for i in video %}
+		<video height="720" width="600" controls="true" autoplay="">
+			<source src="{{i}}" type="video/mp4">
+		</video><br>
+	{% endfor %}
+	{% for i in doc %}
+		<div class="container" style="padding: 30px;">
+			<a href="{{i}}">{{sub}} complete pdf</embed>
+		</div>	
+	{% endfor %}
+</div>
+</body>
+</html>

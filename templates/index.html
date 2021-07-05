@@ -1,0 +1,262 @@
+{% load static %}
+<html>
+<head>
+    <!-- <link rel="stylesheet" href ="{% static 'css/style.css' %}" type="text/css"> -->
+    <link rel="stylesheet" href ="{% static 'css/course.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
+    <title>Home</title>
+</head>
+<body> 
+      <div class="top py-2 bg-light" >
+      <div class="container" >
+        <div class="row align-items-center" >
+          <div class="col-lg-9 d-none d-lg-block">
+            <a href="#" class="small text-success mr-3"><span><i class="fas fa-question-circle text-success"></i></span> Have a questions?</a> 
+            <a href="#" class="small text-success mr-3"><span><i class="fas fa-phone-square text-success"></i></span> 10 20 123 456</a> 
+            <a href="#" class="small text-success mr-3"><span><i class="fas fa-envelope text-success"></i></span> info@mydomain.com</a> 
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+  <nav id="mainnavbar" class="sticky-top navbar navbar-expand-lg navbar-light bg-light" style="font-size: 18px;font-weight: 50px;">
+
+  <a class="navbar-brand " href="#"><img src ="{% static 'images/logo.jpg' %}"></a>
+  <button class="navbar-toggler  mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav nav-fill w-100">
+      <li class="nav-item">
+        <a class="nav-link text-success font-weight-bolder" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' u.user %}">About us <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'admission' u.user %}">Admissions</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="" href="{% url 'course' u.user %}">Courses</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'contact' u.user %}">Contact</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="{% url 'show' u.user %}">Learning-Page</a>
+      </li>
+      <li class="nav-item ">
+        <button class="btn dropdown " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-user-circle text-secondary font-weight-bolder" style="font-size: 30px;"></i>
+        </button>
+        <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton" style="width: 260px;margin-left: 1050px;">
+          <p class="dropdown-item ml-5 pl-5"><i class="fa fa-user-circle text-dark display-4"></i></p>
+          <p class="dropdown-item border-bottom text-center text-dark"><strong>{{u.name}}</strong></p>
+          <p class="dropdown-item text-center border-bottom mt-2 text-dark"><strong>{{u.email}}</strong></p>
+          <a class="dropdown-item text-center text-dark" href="{% url 'logout' %}"><button class="btn btn-secondary">Log-out <i class="fas fa-door"></i></button></a>
+        </div>
+      </li>
+
+
+
+    </ul>
+
+      </div>
+
+  </nav>
+
+      <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="10000">
+      <img src="{% static 'images\hero_1.jpg' %}" class="d-block w-100" alt="...">
+        <h5 class="display-2 text-white mb-5 carousel-caption d-flex d-md-block " style="font-weight: bolder;">Academics</h5>
+    </div>
+    <div class="carousel-item" data-interval="2000">
+      <img src="{% static 'images\hero_1.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images\hero_1.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  <br><br>
+    <div class="heading text-center"><h1>Popular Courses</h1></div>
+    
+    <div class="container justify-content-center">
+      <div class="row justify-content-center">
+        <div class="gallery m-4 col-3">
+            <a href="{% url 'course_single' u.user 'App development' %}">
+            <img src="{% static 'images/course_1.jpg' %}"  width="600" height="400">
+            </a><div class="price"></div>
+            <div class="desc">Mobile Application</div>
+          </div>
+      
+        <div class="gallery m-4 col-3">
+          <a href="{% url 'course_single' u.user 'web designing' %}">
+          <img src="{% static 'images\course_2.jpg' %}" width="600" height="400">
+         </a><div class="price"></div>
+          <div class="desc">Web Designing</div>
+        </div>
+      
+        <div class="gallery m-4 col-3">
+          <a href="{% url 'course_single' u.user 'python' %}">
+          <img src="{% static 'images/course_3.jpg' %}" width="600" height="400">
+          </a><div class="price"></div>
+          <div class="desc">Python</div>
+          </div>
+      
+         <div class="gallery m-4 col-3">
+            <a href="{% url 'course_single' u.user 'software engineering' %}">
+            <img src="{% static 'images/course_4.jpg' %}"  width="600" height="400">
+             </a><div class="price"></div>
+             <div class="desc">S/W Enginering</div>
+         </div>
+         <div class="gallery m-4 col-3">
+           <a href="{% url 'course_single' u.user 'database management system' %}">
+            <img src="{% static 'images/course_5.jpg' %}"  width="600" height="400">
+           </a><div class="price"></div>
+          <div class="desc"> DBMS</div>
+          </div>
+          <div class="gallery m-4 col-3">
+            <a href="{% url 'course_single' u.user 'c' %}">
+            <img src="{% static 'images/course_6.jpg' %}"  width="600" height="400">
+             </a><div class="price"></div>
+           <div class="desc"> C programing</div>
+          </div>
+         
+        </div>
+   
+      <div class="heading my-5 text-center"><h1>Testimonials</h1></div>
+      
+      <div class="row">
+      <div class="card col-3" style="width: 100%;">
+  <img src="{% static 'images/person_1.jpg' %}" class="card-img-top" style="">
+  <div class="card-body">
+    <h5 class="card-title">Walt</h5>
+    <p class="card-text">Dr. P Walt  is a Professor in the Department of Computer Science at Boston
+            University, where he has been since 1994,M.S. from the State University of New York. He received his
+            Ph.D. in Computer Science from the Oxford University in 1994.</p>
+    
+  </div>
+</div>
+<div class="card col-3" style="width: 100%;">
+  <img src="{% static 'images/person_2.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Jessie</h5>
+    <p class="card-text">Professor Jessie is co-author of Internet Measurement: Infrastructure, Traffic, and
+            Applications (Wiley Press, 2018) and is the author of over two hundred papers on
+            Database base Management systems.</p>
+    
+  </div>
+</div>
+   <div class="card col-3" style="width: 100%;">
+  <img src="{% static 'images/person_3.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">George</h5>
+    <p class="card-text">Dr. P George  is a Professor in the Department of Computer Science at Cambridge
+            University in 1994, and an M.S. from the State University of California. He received his
+            Ph.D. in Computer Science from the Oxford University in 2000</p>
+    
+  </div>
+</div>   
+<div class="card col-3" style="width: 100%;">
+  <img src="{% static 'images/person_4.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Lilly</h5>
+    <p class="card-text">Dr. P Lilly  is a Professor in the Department of Computer Science at Manchester
+            University since 1994,M.S. from the State University of London. He received his
+            Ph.D. in Computer Science from the Manchester University in 1990</p>
+    
+  </div>
+</div>
+</div>
+
+
+
+<div class="footer my-4 w-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3">
+            <p class="my-5"><img src="{% static 'images/logo.png' %}" alt="Image" class="img-fluid"></p>
+            <p style="color: white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>  
+            <p><a href="#">Learn More</a></p>
+          </div>
+          <div class="col-lg-3">
+            
+          </div>
+          <div class="col-lg-3">
+              <h4 class="footer-heading mt-5"><span><u>Our Courses</u></span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="{% url 'course_single' u.user 'App development' %}">App development</a></li>
+                  <li><a href="{% url 'course_single' u.user 'python' %}">Python</a></li>
+                  <li><a href="{% url 'course_single' u.user 'software engineering' %}">S/W engineering</a></li>
+                  <li><a href="{% url 'course_single' u.user 'c' %}">C programming</a></li>
+                  <li><a href="{% url 'course_single' u.user 'database management system' %}">DBMS</a></li>
+                  <li><a href="{% url 'course_single' u.user 'web designing' %}">Web Designing</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3">
+              <h4 class="footer-heading mt-5"><span><u>Contact</u></span></h3>
+              <ul class="list-unstyled">
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Support Community</a></li>
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">Share Your Story</a></li>
+                  <li><a href="#">Our Supporters</a></li>
+              </ul>
+          </div>
+        </div>
+
+
+
+
+
+  <style type="text/css">
+   
+.footer{
+  background-color:#183661;
+}
+.footer a{
+    color: green;
+}
+
+.footer a:hover{
+    color: white;
+}
+
+
+.footer h4{
+    color: white;
+}
+
+  </style> 
+    <script type="text/javascript" src="{% static 'js/slider.js' %}">
+    </script>
+
+    
+    <!-- Optional JavaScript  -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>        
+</body>
+
+</html>>

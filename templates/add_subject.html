@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>main</title>
+</head>
+<body>
+	{{msg}}
+	<form action="{% url 'add_subject' %}" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+	subject name:<input type="text" name="sub"><br>
+	details : <input type="text" name="detail"><br>
+	videos:<input type="file" name="video"><br>
+	pdf:<input type="file" name="pdf"><br>
+	<input type="submit" value="submit">
+	</form>	
+	
+</body>
+</html>
